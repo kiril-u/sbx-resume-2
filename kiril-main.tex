@@ -1,0 +1,244 @@
+%% Copyright 2022 Kiril Urivsky.
+% https://github.com/kiril-u/kiril-resume-2022
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,roman]{moderncv}      % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+
+\moderncvcolor{blue} % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{enumitem}
+\setlist[description]{leftmargin=1cm,labelindent=1cm}
+\usepackage{import}
+
+% personal data
+\name{Kiril}{Urivsky}
+% \address{Ashdod, South District}
+% \phone[mobile]{052-547-0608}
+% \email{kirilurivsky@gmail.com}
+% \linkedin{https://linkedin.com/in/kiril-u} 
+% \extrainfo{Green Pass: Valid}
+
+\newcommand*{\customcventry}[7][.25em]{
+	\begin{tabular}{@{}l} %%%%% Degree (First line right) 
+		{\bfseries #4} #3
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}%%%%% Location (First line left)
+	 %	#2
+	\end{tabular}
+	\hfill
+	\begin{tabular}{@{}l} %%%%% Institute (second line italics left) 
+		#7
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}} %%%%% Years
+		 #2
+	\end{tabular}
+	% \ifx&#7&%
+	% \else{\\%
+	% \begin{minipage}{\maincolumnwidth}%
+	%		\small#7%
+	% \end{minipage}}\fi%
+	\par\addvspace{#1}
+}
+
+\newcommand*{\customcvproject}[4][.25em]{
+	   \vfill\noindent
+	   % \vfill
+	 \begin{tabular}{@{}l} 
+		{\bfseries #2}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\itshape #3}
+	\end{tabular}
+	\ifx&#4
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#4%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\newcommand*{\cvref}[3][.25em]{
+	  %  \vfill\noindent
+	\begin{tabular}{@{}l} 
+		{\bfseries #2}
+	\end{tabular}
+	\ifx&#3
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#3%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+
+\setlength{\tabcolsep}{12pt}
+% ------------------------------------
+\begin{document}
+\makecvtitle
+\vspace*{-15mm}
+
+\begin{center}
+	\begin{tabular}{ c c c c }
+		\faEnvelopeO\enspace \href{mailto:kirilurivsky@gmail.com}{kirilurivsky@gmail.com} &	\faMobile\enspace \href{tel:972525470608}{052-547-0608}
+		 & \faLinkedinSquare\enspace \href{https://www.linkedin.com/in/kiril-u}{linkedin.com/kiril-u}
+		\faLocationArrow\enspace \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod}
+	\end{tabular}
+\end{center}
+
+\subsection{SUMMARY}{
+	{Brief summary.}
+}
+
+\section{EDUCATION}
+
+{\customcventry{2019--2021}{Max Stern Yezreel Valley College. \textit{Ongoing}.}{M.A., Educational Psychology,}{}{}{}	
+
+\begin{enumerate}[leftmargin=0.75cm,label=\textcolor{cyan}{\textbullet}]
+	\itemsep 0em 
+%\begin{itemize}
+	\item Conducted evaluations for students to determine their eligibility for special needs programs.
+	\item Worked with teachers to develop and help implement classroom management procedures and Individualized Educational Programs for at-risk students. 
+	\item Coordinated with teachers and administrative staffs to implement academic programs based on student’s potential.
+	\item Provided counseling services to parents on behavior management techniques and parenting skills.
+%\end{itemize}
+\end{enumerate}
+}
+
+{\customcventry{2015--2018}{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Ben-Gurion University}}{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{B.A., Psychology and Multidisciplinary Studies.}}{Eilat}{}{}	
+
+\begin{enumerate}[leftmargin=0.75cm,label=\textcolor{cyan}{\textbullet}]
+	\itemsep 0em 
+			\item \href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Summa Cum Laude, 95.00}
+			\item \href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Received Rector's Award for outstanding academic achievement} \hfill 2018
+			\item \href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Received Department Chair’s Excellency Award} \hfill 2017
+\end{enumerate}
+}
+
+\subsection{CERTIFICATIONS}
+
+{\customcventry{2009--2010}{\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{IQline, Academy of Sciences and Arts}}{\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{Computer Technician Course},}{Ashdod}{}{}	
+	
+	\begin{enumerate}[leftmargin=0.75cm,label=\textcolor{cyan}{\textbullet}]
+		\itemsep 0em 
+		%\begin{itemize}
+		\item Installation and maintenance of computer operating systems (Windows, GNU/Linux), hardware, and software packages.
+		\item Setup and management of local area network infrastructures.
+		\item Providing technical support, troubleshooting, and repair of hardware components and peripheral equipment. 
+		%\end{itemize}
+	\end{enumerate}
+}
+
+\section{EXPERIENCE}
+
+{\customcventry{2018--2019}{at \href{http://www.kidumpro.co.il/}{Kidum Rehabilitation Projects,} Ashdod.}{Rehabilitation Coordinator}{}{}{}	
+	
+	\begin{enumerate}[leftmargin=0.75cm,label=\textcolor{cyan}{\textbullet}]
+		\itemsep 0em 
+		%\begin{itemize}
+		\item Established and maintained contact with clients and other key stakeholders to ensure and facilitate their access to appropriate information, care providers, and other essential services
+		\item Formalized, reviewed, monitored and reported on patients' progress with regard to their rehabilitation plans and activities
+		%\end{itemize}
+	\end{enumerate}
+}
+
+{\customcventry{2013--2015}{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{at Reshef Security Ltd.,}.}{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{Security Guard}}{}{}{}	
+	
+	\begin{enumerate}[leftmargin=0.75cm,label=\textcolor{cyan}{\textbullet}]
+		\itemsep 0em 
+		%\begin{itemize}
+		\item Granted access to areas based on identification and kept logs of visitors
+		\item Kept record and generated reports on property damage, malfunctioning equipment, and out-of-place occurrences
+		\item Bank Leumi's office buildings in Lod and Rishon LeZion \hfill 2015
+		\item Flying Cargo logistics Kannot Industrial Zone \hfill 2013
+		%\end{itemize}
+	\end{enumerate}
+}
+
+{\customcventry{2013--2014}{at IDF's Combat Engineering Corps}{NCO of Casualty Assistance}{}{}{}	
+	
+	\begin{enumerate}[leftmargin=0.75cm,label=\textcolor{cyan}{\textbullet}]
+		\itemsep 0em 
+		%\begin{itemize}
+		\item Provided assistance to spouses and families of fallen soldiers with coordinating funeral honors and memorials
+		\item Helped family members and other close relatives to receive benefits or entitlements during the period immediately following a casualty
+		%\end{itemize}
+	\end{enumerate}
+}
+
+\subsection{LANGUAGES \& TECHNOLOGY}
+
+\cvref{English, Hebrew, Russian}
+{Highly proficient and well-versed in the syntax, grammar and pragmatic use of all three in causal, organizational, and academic discourse.}
+{}
+
+\cvref{Computer Languages}
+{	\begin{enumerate}[leftmargin=0.75cm,label=\textcolor{cyan}{\textbullet}]
+		\itemsep 0em 
+		\item Interpretive languages: Bash, Bourne Shell, and 	other similar POSIX-compliant languages.
+		\item Markup languages: Markdown, HTML, XML, and LaTeX
+		\item Programming languages: Superficial knowledge of C, Java and JavaScript.
+\end{enumerate}}
+{}	
+
+\cvref{Software}
+	{Skilled and well-experienced in using Microsoft Office programs, namely: Word, PowerPoint, Excel, Outlook, OneNote, Publisher, and Access}
+	{High proficiency in conducting statistical analysis using IBM's SPSS, JASP, and Statistica.
+	Moderately skilled in using image (Adobe Photoshop, GIMP, Krita), audio (Audacity, Ardour), and video (Sony Vegas, Kdenlive) editing software}
+
+
+\setlength{\columnwidth}{\textwidth}
+\addtolength{\columnwidth}{-\columnsep}
+\setlength{\columnwidth}{.5\columnwidth}
+
+\setlength{\hintscolumnwidth}{0.175\columnwidth}
+\setlength{\separatorcolumnwidth}{0.025\columnwidth}
+%
+\renewcommand*{\recomputecvbodylengths}{%
+	% body lengths
+	\setlength{\maincolumnwidth}{\columnwidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}%
+	\setlength{\listitemcolumnwidth}{\maincolumnwidth-\listitemsymbolwidth}%
+	\setlength{\doubleitemcolumnwidth}{\maincolumnwidth-\hintscolumnwidth-\separatorcolumnwidth-\separatorcolumnwidth}%
+	\setlength{\doubleitemcolumnwidth}{0.5\doubleitemcolumnwidth}%
+	\setlength{\listdoubleitemcolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
+	\setlength{\listdoubleitemcolumnwidth}{0.5\listdoubleitemcolumnwidth}%
+	% regular lengths
+	\setlength{\parskip}{0pt}}
+\recomputecvbodylengths
+
+\section{COMMUNITY INVOLVEMENT}
+
+\begin{multicols}{2}
+	\cvref{Mental Health Assistant (2017--2018)}
+	{Clalit's Mental Health Clinic, Eilat}
+	{Assisted physicians, health practitioners, and psychiatrists in working with patients with mental or emotional disorders}
+	
+	\columnbreak
+	
+	\cvref{Mentorship at Perach (2015--2018)}
+	{Eilat}
+	{Acted as a tutor and mentor for underprivileged children}
+\end{multicols}
+
+%\begin{minipage}{\maincolumnwidth}%
+%\end{minipage}%
+\end{document}
