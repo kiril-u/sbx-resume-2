@@ -1,1 +1,1 @@
-# kiri-resume-2022
+# not ready
