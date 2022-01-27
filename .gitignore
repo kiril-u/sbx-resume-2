@@ -16,3 +16,5 @@ backup/
 Fonts/arial (Case Conflict).ttf
 
 *.md~
+
+*.sh~
