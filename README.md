@@ -17,4 +17,10 @@
  - main.tex - The main file that combines both versions to a single PDF.
  - main.pdf - The final document ready for export.
  
+ ## How to Use
+ 
+ 1. Edit your TeX files and compile them
+ 2. Combine both files using ./combine.sh (using poppler)
+ 
+ 
  
