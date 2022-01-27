@@ -1,0 +1,481 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kiril's Resume 2022
+% https://github.com/kiril-u/kiril-resume-2022
+% Copyright 2022 Kiril Urivsky.
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+% Based on the work of Vel and Alessandro Plasmati of LaTeXTemplates.com
+%!TEX program = xelatex
+% NOTE: this template must be compiled with XeLaTeX rather than PDFLaTeX
+% due to the custom fonts used. The line above should ensure this happens
+% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
+% to switch to using XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[
+	11pt,a4paper % Default font size, can be between 8pt and 12pt
+]{article}
+\usepackage[utf8x]{inputenc}
+% \usepackage[cp1255]{inputenc}
+% \usepackage[english,hebrew]{babel}
+\usepackage{hebfont}
+%----------------------------------------------------------------------------------------
+%	CLASS CONFIGURATION
+%----------------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+% \ProvidesClass{FreemanCV}[2021/09/03 Freeman CV Class v3.0]
+
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % Pass through any extra options specified to the base class
+\ProcessOptions\relax % Process class options
+
+% \LoadClass{article} % Load the base class
+
+%----------------------------------------------------------------------------------------
+%	REQUIRED PACKAGES AND MISC CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{etoolbox} % Required for conditional logic and changing commands
+
+\setlength{\parindent}{0pt} % Paragraph indentation
+
+\usepackage{supertabular} % Required for the supertabular environment which allows tables to span multiple pages so sections with tables correctly wrap across pages
+
+\usepackage{extsizes} % Allows using more default font sizes as a class option
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage[
+a4paper, % Paper size
+top=3cm, % Top margin
+bottom=1.75cm, % Bottom margin
+left=1.25cm, % Left margin
+right=1.25cm, % Right margin
+footskip=1cm, % Space from the bottom margin to the baseline of the footer
+headsep=0.5cm, % Space from the top margin to the baseline of the header
+headheight=1cm, % Height of the header
+%showframe % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+%----------------------------------------------------------------------------------------
+%	COLUMN LAYOUT
+%----------------------------------------------------------------------------------------
+
+\usepackage{paracol} % Required for creating multi-column layouts that can span pages automatically
+
+\AtBeginEnvironment{paracol}{\setlength{\parindent}{0pt}} % Paracols have default paragraph indentation and this overrides it to the template default of no indentation
+
+\setlength\columnsep{0.05\textwidth} % Amount of horizontal space between the columns
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
+
+\defaultfontfeatures{Ligatures=TeX} % To support LaTeX ligatures (e.g. `` and --)
+\defaultfontfeatures{Path=Fonts/} % Specify the location of font files
+
+\setmainfont{Calibri}[
+UprightFont=*-Regular.ttf,
+BoldFont=*-Bold.ttf,
+BoldItalicFont=*-BoldItalic.ttf,
+ItalicFont=*-Italic.ttf,
+SmallCapsFont=*-SC.ttf
+]
+
+\setsansfont{LibertinusSans}[
+UprightFont=*-Regular.otf,
+BoldFont=*-Bold.otf,
+ItalicFont=*-Italic.otf
+]
+
+\newfontfamily{\cursivefont}{freebooterscript} % New font family for the cursive font Freebooter Script
+
+\newfontfamily{\FA}{FontAwesome} % Create a new font family for FontAwesome icons
+\input{Fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the Fonts folder
+
+%----------------------------------------------------------------------------------------
+%	HEADERS & FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for customizing headers and footers
+\pagestyle{fancy} % Enable custom headers and footers
+
+\renewcommand{\headrulewidth}{0pt} % Remove the default rule under the header
+
+\fancyhf{} % Clear default headers/footers by default, add headers and footers in the template file as per the example
+%----------------------------------------------------------------------------------------
+%	SECTIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage[nobottomtitles*]{titlesec} % Required for modifying sections, the nobottomtitles* pushes section titles to the next page when they are close to the bottom of the page
+
+\renewcommand{\bottomtitlespace}{0.05\textheight} % The minimal space required from the bottom margin so a section title isn't moved to the next page
+
+\titleformat
+{\section} % Section type being modified
+[block] % Section layout type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
+{\color{headings}\scshape\LARGE\raggedright} % Text formatting of the whole section, i.e. label and title
+{} % Section label (e.g. number) and its formatting
+{0pt} % Horizontal space between the section label and title
+{} % Code before the section title
+[\color{black}\titlerule] % Code after the section title
+
+\titlespacing*{\section}{0pt}{0pt}{8pt} % Spacing around section titles, the order is: left, before and after
+
+%------------------------------------------------
+
+\titleformat
+{\subsection} % Section type being modified
+[block] % Section layout type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
+{\itshape} % Text formatting of the whole section, i.e. label and title
+{} % Section label (e.g. number) and its formatting
+{0pt} % Horizontal space between the section label and title
+{} % Code before the section title
+[] % Code after the section title
+
+\titlespacing*{\subsection}{0pt}{8pt}{3pt} % Spacing around section titles, the order is: left, before and after
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\usepackage[usenames, svgnames]{xcolor} % Required for defining and using custom colors
+
+\definecolor{text}{HTML}{2b2b2b} % Main document text color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
+\definecolor{linkcolor}{HTML}{641c1d} % 25% desaturated headings color for links
+
+\color{text} % Set the default text color
+%----------------------------------------------------------------------------------------
+%	LINKS & METADATA
+%----------------------------------------------------------------------------------------
+\usepackage[
+unicode=true,
+pdfborder=false,
+pdftoolbar=false,
+pdfmenubar=false,
+pdftitle={0525470608-Kiril-Urivsky-אוריבסקי-קיריל-resume},
+pdfauthor={Kiril Urivsky},
+pdfsubject={resume/קורות חיים},
+pdfcreator={Kiril Urivsky},
+pdfproducer={Kiril Urivsky},
+pdfkeywords={Kiril Urivsky,אוריבסקי קיריל,resume,cv,קורות חיים},
+hidelinks
+]{hyperref}
+%----------------------------------------------------------------------------------------
+%	CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+% Command for adding a new job entry (work experience)
+\newcommand{\jobentry}[5]{
+	{\raggedleft\textsc{#1\expandafter\ifstrequal\expandafter{#2}{}{}{\hspace{6pt}\footnotesize{(#2)}}}\par} % Duration and conditional full time/part time text
+	\expandafter\ifstrequal\expandafter{#3}{}{}{{\raggedright\large #3}\\} % Employer
+	\expandafter\ifstrequal\expandafter{#4}{}{}{{\raggedright\large\textit{\textbf{#4}}}\\[4pt]} % Job title
+	\expandafter\ifstrequal\expandafter{#5}{}{}{#5} % Description
+	\medskip % Vertical whitespace
+}
+
+% Command for entering a new qualification (education)
+\newcommand{\qualificationentry}[5]{
+	\textsc{#1} & \textbf{#2}\\ % Duration and degree
+	\expandafter\ifstrequal\expandafter{#3}{}{}{& {\small\textsc{#3}}\\} % Honors, achievements or distinctions (e.g. first class honors)
+	\expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\} % Department
+	\expandafter\ifstrequal\expandafter{#5}{}{}{& \textit{#5}\\[5pt]} % Institution
+}
+
+% Command for entering a separate table row -- used for any section that uses a two column table for alignment
+\newcommand{\tableentry}[3]{
+	\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[5pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
+}
+
+% Headers and footers can be added with the following commands: \lhead{}, \rhead{}, \lfoot{} and \rfoot{}
+% Example right footer:
+%\rfoot{\textcolor{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+% -------------
+% Language Configuration
+% -------------
+\usepackage{polyglossia}
+\defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+\newfontfamily\hebrewfont[Script=Hebrew]{Arial}
+% Use \begin{hebrew} block of text \end{hebrew} for paragraphs.
+% Use \texthebrew{ } and \textenglish{ } for short texts.
+
+\columnratio{0.55, 0.45} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content
+\begin{document}
+\begin{paracol}{2} % Begin two-column mode
+% \centering % Horizontally center text
+% {\sffamily\Huge \textbf{Kiril Urivsky}} \\
+{\Huge{\textbf{Kiril Urivsky}}} \\
+%--------------- COLORED CONTACT DETAILS BOX ---------------%
+
+\parbox[top][0.11\textheight][c]{\linewidth}{ % Box to hold the colored box; change the fixed height as needed to match the box to the left
+	\colorbox{shade}{ % Create colored box and specify background color
+		\begin{supertabular}{@{\hspace{3pt}} p{0.05\linewidth} | p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faPhone} & \href{tel:972525470608}{052-5470608} \\ % Phone number
+			\raisebox{-1pt}{\small\faEnvelope} & \href{mailto:kirilurivsky@gmail.com}{kirilurivsky@gmail.com} \\ % Email address
+			\raisebox{-1pt}{\small\faLinkedinSquare} & \href{https://www.linkedin.com/in/kiril-u}{linkedin.com/kiril-u} \\
+			\raisebox{-1pt}{\faHome} & \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod, South District} \\% Website
+			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
+			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
+			% See fontawesome.pdf in the Fonts folder for all icons you can use
+		\end{supertabular}
+	}
+	\vfill % Push content to the top of the box
+}
+
+\section{Summary}
+
+Works well independently or in a group setting, providing all facets of technical support and assistance with computers and other devices, such as troubleshooting, installations, and maintenance. In-depth knowledge and understanding of numerous software packages and operating systems.
+
+% בעל ידע עדכני וניסיון רב באבחון ובטיפול בתקלות תוכנה וחומרה במחשבים נייחים וניידים. מחפש תפקיד בעל אופי שירותי וצוותי בו אוכל להביא לידי ביטוי את כישוריי באופן המיטבי.
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CURRICULUM VITAE TITLE
+%----------------------------------------------------------------------------------------
+
+%\parbox[][0.11\textheight][c]{\linewidth}{ % Box to hold your name and CV title; change the fixed height as needed to match the colored box to the right
+%	 % Your name
+%
+%	\medskip % Vertical whitespace
+%%
+%%	{\cursivefont\Huge\textcolor{headings}{Curriculum Vitae}}
+%
+%	\vfill % Push content to the top of the box
+% }
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+% Each job is added with a \jobentry command. Below is an empty one to use as a template:
+
+%\jobentry
+%	{} % Duration
+%	{} % FT/PT (full time or part time)
+%	{} % Employer
+%	{} % Job title
+%	{} % Description
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\jobentry
+{} % Duration
+{} % FT/PT (full time or part time)
+{Educational-Psychological Services, Afula \hfill 2019 -- 2021} % Employer
+{Educational Psychologist (Intern)} % Job title
+{
+	- Conducted evaluations for students to determine their eligibility for special needs programs.
+\\
+	- Coordinated with teachers and administrative staffs to implement classroom management procedures and Individualized Educational Programs for at-risk students.
+\\
+	- Provided counseling services to parents on behavior management techniques and parenting skills.
+} % Description
+
+\hrulefill
+
+\jobentry
+	{} % Duration
+	{} % FT/PT (full time or part time)
+	{\href{http://www.kidumpro.co.il/}{Kidum Rehabilitation Projects, Ashdod \hfill 2018 -- 2019}} % Employer
+	{Rehabilitation Coordinator} % Job title
+	{
+	- Established and maintained contact with clients and other key stakeholders to ensure and facilitate their access to appropriate information, care providers, and other essential services \\
+	- Formalized, reviewed, monitored and reported on patients' progress with regard to their rehabilitation plans and activities} % Description
+
+\hrulefill
+
+\jobentry
+	{} % Duration
+	{} % FT/PT (full time or part time)
+	{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{Reshef Security Ltd. \hfill 2013 -- 2015}} % Employer
+	{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{Security Guard}} % Job title
+	{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{- Bank Leumi's office buildings in Lod and Rishon LeZion\\
+- Flying Cargo Logistics Center at Kannot Industrial Zone
+%	- Granted access to areas based on identification and kept logs of visitors \\
+%	- Kept record and generated reports on out-of-place occurrences \\
+}}
+
+	\section{Community Involvement}
+
+\textbf{\textit{Mental Health Assistant, Eilat}} \hfill 2017 -- 2018
+
+Assisted physicians, health practitioners, and psychiatrists in working with patients with mental or emotional disorders at Clalit's Mental Health Clinic.
+
+\textbf{\textit{Mentorship at Perach, Eilat}} \hfill 2015 -- 2018
+% Acted as a tutor and mentor for underprivileged children
+\switchcolumn % Switch to the second (right) column
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+% Each qualification entry is added with a \qualificationentry command. Below is an empty one to use as a template:
+
+%\qualificationentry
+%	{} % Duration
+%	{} % Degree
+%	{} % Honors, achievements or distinctions (e.g. first class honors)
+%	{} % Department
+%	{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\qualificationentry
+		{2019 -- 2021} % Duration
+		{Master of Arts} % Degree
+		{} % Honors, achievements or distinctions (e.g. first class honors)
+		{Educational Psychology} % Department
+		{Max Stern Yezreel Valley College} % Institution
+
+	\qualificationentry
+		{2015 -- 2018} % Duration
+		{Bachelor of Arts} % Degree
+		{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textbf{Summa Cum Laude}}} % Honors, achievements or distinctions (e.g. first class honors)
+	%	{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Psychology and Multidisciplinary Studies}} % Department
+		{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Psychology}} % Department
+		{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Ben-Gurion University of the Negev}} % Institution
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%-----------------------------------------------
+
+	\tableentry{2018}{\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Rector’s Prize for Academic Excellence}}}{}
+	\tableentry{}{\textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Ben-Gurion University of the Negev}}}{}
+	% Top award in the Electrical and Computer Engineering Department at BGU.
+	% Faculty of Humanities and Social Sciences
+
+	\tableentry{2017}{\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Department Chair’s Excellency Award}}}{}
+	\tableentry{}{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textit{Ben-Gurion University of the Negev}}}{spaceafter}
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+% - Certifications
+
+\section{Certifications}
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\tableentry{2009 -- 2010}{\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textbf{Computer Technician}}}{}
+	\tableentry{}{\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textit{IQline, \small Academy of Sciences and Arts}}}{spaceafter}
+	% Top award in the Electrical and Computer Engineering Department at BGU.
+	% Faculty of Humanities and Social Sciences
+	%------------------------------------------------
+
+\end{supertabular}
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\tableentry{OS}{GNU/Linux, Microsoft Windows}{spaceafter}
+
+	\tableentry{Office}{Word, PowerPoint, Excel, Outlook}{}
+	\tableentry{}{OneNote, Publisher, Access.}{spaceafter}
+
+	%------------------------------------------------
+
+	\tableentry{Statistics}{SPSS, AMOS, JASP}{spaceafter}
+
+	%------------------------------------------------
+
+	\tableentry{Editing}{Adobe Photoshop, GIMP, Krita}{}
+	\tableentry{}{Sony Vegas, Kdenlive, Ardour}{spaceafter}
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+	\tableentry{Natural}{English, Hebrew, Russian}{}
+
+	\tableentry{Command}{Bash, Zsh, Bourne Shell, and other}{}
+	\tableentry{}{similar POSIX-compliant languages.}{}
+
+	\tableentry{Markup}{HTML, Markdown, XML, \LaTeX}{spaceafter}
+\end{supertabular}
+
+\section{Military Service}
+
+\jobentry
+{} % Duration
+{} % FT/PT (full time or part time)
+{Combat Engineering Corps \hfill 2013 -- 2014} % Employer
+{NCO of Casualty Assistance} % Job title
+{
+	- Provided assistance to spouses and families of casualties in coordinating funeral honors and memorials
+
+	- Helped relatives to receive benefits or entitlements during the period immediately following a casualty
+}
+\end{paracol} % End two-column mode
+
+% ------------------------ END OF THE ENGLISH VERSION ------------------------ %
+\end{document}

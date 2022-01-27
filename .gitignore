@@ -1,0 +1,16 @@
+
+*.aux
+
+*.log
+
+*.out
+
+*.gz
+
+backup/2-Before2Columns/
+
+backup/b4xetex/
+
+backup/
+
+Fonts/arial (Case Conflict).ttf
