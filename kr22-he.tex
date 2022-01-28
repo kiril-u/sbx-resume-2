@@ -17,7 +17,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 \documentclass[
-	11pt,a4paper % Default font size, can be between 8pt and 12pt
+	12pt,a4paper % Default font size, can be between 8pt and 12pt
 ]{article}
 \usepackage[utf8x]{inputenc}
 % \usepackage[cp1255]{inputenc}
@@ -51,30 +51,26 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage[
-a4paper, % Paper size
-top=3cm, % Top margin
-bottom=1.75cm, % Bottom margin
-left=1.25cm, % Left margin
-right=1.25cm, % Right margin
-footskip=1cm, % Space from the bottom margin to the baseline of the footer
-headsep=0.5cm, % Space from the top margin to the baseline of the header
-headheight=1cm, % Height of the header
-%showframe % Uncomment to show frames around the margins for debugging purposes
+	a4paper, % Paper size
+	top=3cm, % Top margin
+	bottom=1.75cm, % Bottom margin
+	left=1.25cm, % Left margin
+	right=1.25cm, % Right margin
+	footskip=1cm, % Space from the bottom margin to the baseline of the footer
+	headsep=0.5cm, % Space from the top margin to the baseline of the header
+	headheight=1cm, % Height of the header
+	%showframe % Uncomment to show frames around the margins for debugging purposes
 ]{geometry}
-
-%----------------------------------------------------------------------------------------
-%	COLUMN LAYOUT
-%----------------------------------------------------------------------------------------
 
 \usepackage{paracol} % Required for creating multi-column layouts that can span pages automatically
 
 \AtBeginEnvironment{paracol}{\setlength{\parindent}{0pt}} % Paracols have default paragraph indentation and this overrides it to the template default of no indentation
 
-\setlength\columnsep{0.05\textwidth} % Amount of horizontal space between the columns
+\setlength\columnsep{0.025\textwidth} % Amount of horizontal space between the columns
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------
 %	FONTS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------
 
 \usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
 
@@ -216,201 +212,67 @@ hidelinks
 \begin{hebrew}
 \begin{paracol}{2} % Begin two-column mode
 
-	%----------------------------------------------------------------------------------------
-	%	EDUCATION
-	%----------------------------------------------------------------------------------------
+\section{השכלה}
+%------------------------------------------------
+\textbf{תואר מוסמך, פסיכולוגיה חינוכית} \hfill 2021 - 2019 \\
+\textit{המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן}
 
-	\section{השכלה}
-
-	% Each qualification entry is added with a \qualificationentry command. Below is an empty one to use as a template:
-
-	%\qualificationentry
-	%	{} % Duration
-	%	{} % Degree
-	%	{} % Honors, achievements or distinctions (e.g. first class honors)
-	%	{} % Department
-	%	{} % Institution
-
-	% All 5 parameters must be supplied but any can be empty if you don't need them
-
-	%------------------------------------------------
-
-%	\begin{supertabular}{l r} % Start a table with two columns, the table will ensure everything is aligned
-
-		%------------------------------------------------
-
-תואר מוסמך \hfill 2021 - 2019 \\
-\textbf{פסיכולוגיה חינוכית} \\
-\textit{המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן} \\
-
-\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{תואר ראשון (הצטיינות יתרה) \hfill 2018 - 2015} \\
-\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textbf{פסיכולוגיה ולימודים רב תחומיים במדעי הרוח והחברה}} \\
-\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textit{אוניברסיטת בן-גוריון בנגב}}
-
-%		\qualificationentry
-%		{2021 - 2019} % Duration
-%		{תואר מוסמך} % Degree
-%		{} % Honors, achievements or distinctions (e.g. first class honors)
-%		{פסיכולוגיה חינוכית} % Department
-%		{המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן} % Institution
-%
-%		\qualificationentry
-%		{2018 - 2015} % Duration
-%		{תואר ראשון}
-%		{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textbf{הצטיינות יתרה}}} % Honors, achievements or distinctions (e.g. first class honors)
-%		%	{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Psychology and Multidisciplinary Studies}} % Department
-%		{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{פסיכולוגיה}} % Department
-%		{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{אוניברסיטת בן-גוריון בנגב}} % Institution
-
-		%------------------------------------------------
-
-%	\end{supertabular}
-
-	%----------------------------------------------------------------------------------------
-	%	AWARDS
-	%----------------------------------------------------------------------------------------
-
-	\section{פרסים, הוקרה והצטיינות}
-
-	% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
-
-	%\tableentry{Heading}{Content}{spaceafter}
-	% All 3 parameters must be supplied but any can be empty if you don't need them
-	% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
-
-	%------------------------------------------------
-
-\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textbf{פרס הרקטור למצטיין יתרה}}
-\hfill
-2018
- \\
+%------------------------------------------------
+\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{תואר ראשון בפסיכולוגיה}} \hfill 2015 -- 2018 \\
+\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{הצטיינות יתרה}} \\
 \textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{אוניברסיטת בן-גוריון בנגב}}
 
-\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textbf{פרס ראש המחלקה להצטיינות}}
-\hfill
-2017
-\\
-%	\begin{supertabular}{l r} % Start a table with two columns, the table will ensure everything is aligned
+\section{פרסים, הוקרה והצטיינות}
+%------------------------------------------------
+\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textbf{פרס הרקטור למצטיין יתרה}} \hfill 2018
+
 \textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{אוניברסיטת בן-גוריון בנגב}}
-		%-----------------------------------------------
 
-%		\tableentry{2018}{\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{פרס הרקטור למצטיין יתרה}}}{}
-%		\tableentry{}{\textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{אוניברסיטת בן-גוריון בנגב}}}{}
-%		% Top award in the Electrical and Computer Engineering Department at BGU.
-%		% Faculty of Humanities and Social Sciences
-%		\tableentry{2017}{\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{פרס ראש המחלקה להצטיינות}}}{}
-%		\tableentry{}{\textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{אוניברסיטת בן-גוריון בנגב}}}{spaceafter}
+\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textbf{פרס ראש המחלקה להצטיינות}} \hfill 2017
 
-		%------------------------------------------------
-
-%	\end{supertabular}
-
-	% - Certifications
+\textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{אוניברסיטת בן-גוריון בנגב}}
 
 \section{תעודות והסמכות}
 
-\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textbf{קורס טכנאי מחשבים}
-	\hfill
-	2010 - 2009}
+\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textbf{\large קורס טכנאי מחשבים} \hfill 2010 - 2009}
 
 \href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{
-- אבחון, תיקון, ותחזוקה של רכיבי תוכנה, חומרה, וציוד נלווה \\
-- הרכבה וטיפול בבעיות במחשבים נייחים וניידים \\
-- התקנה ושימוש במערכות הפעלה Windows ו-Linux \\
-- בנייה והפעלה של רשתות מקומיות ושרתים ביתיים.}
-% \begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
-%\jobentry
-%{} % Duration
-%{} % FT/PT (full time or part time)
-%{\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textbf{קורס טכנאי מחשבים}
-%\hfill
-%		2010 - 2009}} % Employer
-%{} % Job title
-%{ביצוע הליכי אבחון, תיקון, ותחזוקה של רכיבי תוכנה וחומרה, קרי הרכבה וטיפול בבעיות במחשבים נייחים וניידים, התקנה ושימוש במערכות הפעלה Windows ו-Linux, וכמו כן בנייה והפעלה של רשתות מקומיות ושרתים ביתיים.}
-%
+- הרכבה, אבחון, תיקון, ותחזוקה של רכיבי תוכנה, חומרה, וציוד נלווה עבור מחשבים נייחים וניידים \\
+- בנייה והפעלה של רשתות מקומיות ושרתים ביתיים}
 
+\section{יישומי מחשב}
 
-% \tableentry{}{תואר מוסמך \hfill 2021 - 2019}{}
-% \tableentry{}{פסיכולוגיה חינוכית}{}
-% \tableentry{}{המכללה האקדמית עמק יזרעאל ע"ש מקס שטרן}{spaceafter}
-
-% \tableentry{}{\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{קורס טכנאי מחשבים 2010 - 2009}}{}
-% \tableentry{}{\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textit{,IQline \small האקדמיה למדע ואומנות}}{spaceafter}
-		% Top award in the Electrical and Computer Engineering Department at BGU.
-		% Faculty of Humanities and Social Sciences
-
-
-	%----------------------------------------------------------------------------------------
-	%	COMPUTER SKILLS
-	%----------------------------------------------------------------------------------------
-
-	\section{יישומי מחשב}
-
-	% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
-
-	%\tableentry{Heading}{Content}{spaceafter}
-	% All 3 parameters must be supplied but any can be empty if you don't need them
-	% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
-
-	%------------------------------------------------
-%	\unsetRTL
-%	\end{Hebrew}
-%\setLTR
-%	\begin{english}
 	\begin{supertabular}{l r} % Start a table with two columns, the table will ensure everything is aligned
-
 		%------------------------------------------------
-
 		\tableentry{מע' הפעלה}{Windows Microsoft GNU/Linux,}{spaceafter}
 
 		\tableentry{אופיס}{Outlook, Excel, PowerPoint, Word,}{}
-		\tableentry{}{Access. Publisher, OneNote,}{spaceafter}
+		\tableentry{}{Access Publisher, OneNote,}{spaceafter}
 
-		\tableentry{סטטיסטיקה}{SPSS. AMOS, JASP,}{spaceafter}
+		\tableentry{סטטיסטיקה}{SPSS AMOS, JASP,}{spaceafter}
 
 		%------------------------------------------------
 
 		\tableentry{עריכה}{Photoshop, Adobe GIMP, Krita,}{}
 		\tableentry{}{Vegas Sony Kdenlive, Ardour,}{spaceafter}
-
 		%------------------------------------------------
-
 	\end{supertabular}
-%\end{english}
-%\unsetLTR
-%\begin{hebrew}
-%	\setRTL
-	%----------------------------------------------------------------------------------------
-	%	COMMUNICATION SKILLS
-	%----------------------------------------------------------------------------------------
 
-	\section{שפות}
-
-	% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
-
-	%\tableentry{Heading}{Content}{spaceafter}
-	% All 3 parameters must be supplied but any can be empty if you don't need them
-	% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
-
-	%------------------------------------------------
-
+\section{שפות}
 	\begin{supertabular}{l r} % Start a table with two columns, the table will ensure everything is aligned
 		\tableentry{טבעיות}{אנגלית, עברית, רוסית}{}
 		\tableentry{מעטפת}{Zsh Bash, Shell, Bourne}{}
 		\tableentry{סימון}{HTML Markdown, XML, ,\LaTeX}{spaceafter}
 	\end{supertabular}
-
-	\section{שירות צבאי}
-
-חיל ההנדסה הקרבית \hfill 2014 -- 2013 \\
-\textbf{מש"ק נפגעים} \\
+%------------------------------------------------
+\section{שירות צבאי}
+\textbf{\large מש"ק נפגעים} \hfill 2013 -- 2014 \\
+\textit{\large חיל ההנדסה הקרבית} \\
 סיוע וטיפול בצורכיהם של חיילים מאושפזים וליווי חיילים \\
 הנמצאים בחופשת מחלה בביתם. כמו כן, מתן תמיכה עבור משפחות שכולות.
-
-\switchcolumn % Switch to the second (right) column
-
-	% \centering % Horizontally center text
-% {\sffamily\Huge \textbf{Kiril Urivsky}} \\
+%---------------------------------------------------
+\switchcolumn % Switch to the first (right) column
+%---------------------------------------------------
 {\Huge{\textbf{אוריבסקי קיריל}}} \\
 %--------------- COLORED CONTACT DETAILS BOX ---------------%
 
@@ -432,21 +294,10 @@ hidelinks
 
 \section{תמצית}
 
-בעל ידע עדכני וניסיון רב באבחון ובטיפול בתקלות תוכנה וחומרה במחשבים נייחים וניידים. מחפש תפקיד בעל אופי שירותי וצוותי בו אוכל להביא לידי ביטוי את כישוריי באופן המיטבי.
-
-%\parbox[][0.11\textheight][c]{\linewidth}{ % Box to hold your name and CV title; change the fixed height as needed to match the colored box to the right
-%	 % Your name
-%
-%	\medskip % Vertical whitespace
-%%
-%%	{\cursivefont\Huge\textcolor{headings}{Curriculum Vitae}}
-%
-%	\vfill % Push content to the top of the box
-% }
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
+- עובד ביעילות הן באופן עצמאי והן במסגרות בהן נדרשת עבודת צוות. \\
+- מסתגל בקלות לסביבות עבודה חדשות, ובאלו מסוגל ללמוד במהירות את דרישות ומחויבויות התפקיד \\
+- בעל מוטיבציה גבוהה לטיפול ומתן שירות מטיב למטופלים ולקוחות \\
+- מחפש תפקיד בעל אופי שירותי וצוותי בו אוכל להביא לידי ביטוי את כישוריי באופן המיטבי.
 
 \section{ניסיון תעסוקתי}
 
@@ -462,50 +313,31 @@ hidelinks
 % All 5 parameters must be supplied but any can be empty if you don't need them
 
 %------------------------------------------------
-
-\jobentry
-{} % Duration
-{} % FT/PT (full time or part time)
-{השירות הפסיכולוגי חינוכי, עפולה \hfill 2021 - 2019} % Employer
-{פסיכולוג חינוכי (פרקטיקום)} % Job title
-{- ביצוע הערכות ואבחונים פסיכולוגיים לתלמידים כדי לבחון את מידת \\
+\textbf{\large פסיכולוג חינוכי (פרקטיקום)} \hfill 2021 - 2019 \\
+\textit{\large השירות הפסיכולוגי חינוכי, עפולה} \\
+- ביצוע הערכות ואבחונים פסיכולוגיים לתלמידים כדי לבחון את מידת \\
 התאמתם לשיבוץ במסגרות לחינוך מיוחד או קבלת התאמות. \\
 - מתן תמיכה והדרכה להורים \\
 - ייעוץ וליווי של אנשי הצוות החינוכי והמנהלי בבתי ספר ובגנים בתכנון והשמה של תוכניות לקידום תלמידים בסיכון
-} % Description
 
-\hrulefill
-
-\jobentry
-{} % Duration
-{} % FT/PT (full time or part time)
-{\href{http://www.kidumpro.co.il/}{קידום פרויקטים שיקומיים, אשדוד \hfill 2019 - 2018}} % Employer
-{מדריך שיקומי} % Job title
-{
+%------------------------------------------------
+\textbf{\large מדריך שיקומי} \hfill 2019 - 2018 \\
+\href{http://www.kidumpro.co.il/}{\textit{\large קידום פרויקטים שיקומיים, אשדוד}} \\
 מתן הערכה, ליווי, סיוע, והעצמה לאדם המשתקם לניהול אורח חיים עצמאי ושילוב בקהילה ובחברה, תוך זיהוי צרכים אישיים, הכנת תוכנית שיקום אישית, ועזרה בהוצאתה לפועל
-} % Description
 
-\hrulefill
-
-\jobentry
-{} % Duration
-{} % FT/PT (full time or part time)
-{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{רשף בטחון \hfill 2015 - 2013}} % Employer
-{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{מאבטח מתקנים}} % Job title
-{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{- משרדי בנק לאומי, ראשון לציון ולוד\\
-		- מרכזי לוגיסטיקה Cargo Flying באזור תעשייה כנות
-		%	- Granted access to areas based on identification and kept logs of visitors \\
-		%	- Kept record and generated reports on out-of-place occurrences \\
-}}
+%------------------------------------------------
+\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{\textbf{\large מאבטח מתקנים}} \hfill 2015 - 2013 \\
+\textit{\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{\large רשף בטחון}} \\
+\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{- משרדי בנק לאומי, ראשון לציון ולוד\\
+	- מרכזי לוגיסטיקה Cargo Flying באזור תעשייה כנות}
 
 \section{התנדבות ועשייה למען הקהילה}
 
-\textbf{התלמדות טיפולית במרכז בריאות הנפש, אילת} \hfill 2018 - 2017
+\textbf{\large התלמדות טיפולית במרפאת בריאות הנפש} \hfill 2018 - 2017 \\
+עזרה בתהליך הטיפולי של ילדים ובני נוער בשיתוף פעולה \\
+עם פסיכיאטרים, פסיכולוגים ושאר צוות מרפאת הדקל, אילת
 
-- עזרה בתהליך הטיפולי של ילדים ובני נוער בשיתוף פעולה עם פסיכיאטרים, פסיכולוגים ושאר צוות מרפאת בריאות הנפש
-
-\textbf{חונך אישי בפרוייקט פר"ח} \hfill 2018 - 2015
-
+\textbf{\large חונך אישי בפרוייקט פר"ח} \hfill 2018 - 2015 \\
 חונך אישי עבור ילדים ונערים בסיכון במסגרת פרויקט פר"ח
 
 
