@@ -7,18 +7,16 @@
 
 *.gz
 
-backup/2-Before2Columns/
-
-backup/b4xetex/
-
-backup/
-
-Fonts/arial (Case Conflict).ttf
-
 *.md~
 
 *.sh~
 
-kr22-en.pdf
+*.tex~
 
+*.html
+
+./Export/*
+
+kr22-en.pdf
+kr22-main.pdf
 kr22-he.pdf
