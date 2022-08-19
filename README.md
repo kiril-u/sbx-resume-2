@@ -1,5 +1,9 @@
 # Simple, Bidirectional, XeLaTeX Resume - Two
 
+## Dependency
+
+- poppler-utils
+
 ## Structure
 
  - Fonts/ - A directory consisting of both used and unused fonts that fit the format.
