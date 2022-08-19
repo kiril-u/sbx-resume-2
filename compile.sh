@@ -1,4 +1,4 @@
 #!/bin/bash
-xelatex -synctex=1 -interaction=nonstopmode kr22-en.tex
-xelatex -synctex=1 -interaction=nonstopmode kr22-he.tex
-pdfunite kr22-he.pdf kr22-en.pdf kr22-main.pdf
+xelatex -synctex=1 -interaction=nonstopmode sbx-resume-2.1-heb.tex
+xelatex -synctex=1 -interaction=nonstopmode sbx-resume-2.1-eng.tex
+pdfunite sbx-resume-2.1-heb.pdf sbx-resume-2.1-eng.pdf sbx-resume-2.1-main.pdf

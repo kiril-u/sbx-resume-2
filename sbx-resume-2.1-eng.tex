@@ -15,6 +15,8 @@
 \documentclass[
 	12pt,a4paper % Default font size, can be between 8pt and 12pt
 ]{article}
+\usepackage{microtype}
+%\usepackage{fancytooltips}
 \usepackage[utf8x]{inputenc}
 % \usepackage[cp1255]{inputenc}
 \usepackage{hebfont}
@@ -72,8 +74,7 @@
 	ItalicFont=*-Italic.otf
 ]
 
-\newfontfamily{\cursivefont}{freebooterscript} % New font family for the cursive font Freebooter Script
-
+%\newfontfamily{\cursivefont}{freebooterscript} % New font family for the cursive font Freebooter Scrip
 \newfontfamily{\FA}{FontAwesome} % Create a new font family for FontAwesome icons
 \input{Fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the Fonts folder
 %-------------------
@@ -172,41 +173,40 @@
 \defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
 \setdefaultlanguage{english}
 \setotherlanguage{hebrew}
-\newfontfamily\hebrewfont[Script=Hebrew]{Arial}
+\newfontfamily\hebrewfont[Script=Hebrew]{Calibri}
 % Use \begin{hebrew} block of text \end{hebrew} for paragraphs.
 % Use \texthebrew{ } and \textenglish{ } for short texts.
 
-\columnratio{0.55, 0.45} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content
+\columnratio{0.5, 0.5} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content
 \begin{document}
-\begin{paracol}{2} % Begin two-column mode
-% \centering % Horizontally center text
 % {\sffamily\Huge \textbf{Kiril Urivsky}} \\
-{\Huge{\textbf{Urivsky Kiril}}} \\
+\begin{center}
+				{\Huge{\textbf{Urivsky Kiril}}}
 
+\vspace{2pt}
+\colorbox{shade}{ % Create colored box and specify background color
+\raisebox{-1pt}{\faPhone} \href{tel:972525470608}{052-5470608} | \raisebox{0pt}{\small\faEnvelope} \href{mailto:kirilu@tutanota.com}{kirilu@tutanota.com} | \raisebox{0pt}{\faHome} \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod, South District}
+}
+\end{center}
 %--------------- COLORED CONTACT DETAILS BOX ---------------%
-\parbox[top][0.11\textheight][c]{\linewidth}{ % Box to hold the colored box; change the fixed height as needed to match the box to the left
-	\colorbox{shade}{ % Create colored box and specify background color
-		\begin{supertabular}{@{\hspace{3pt}} p{0.05\linewidth} | p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
-			\raisebox{-1pt}{\faPhone} & \href{tel:972525470608}{052-5470608} \\ % Phone number
-			\raisebox{-1pt}{\small\faEnvelope} & \href{mailto:kirilurivsky@gmail.com}{kirilurivsky@gmail.com} \\ % Email address
-			\raisebox{-1pt}{\small\faLinkedinSquare} & \href{https://www.linkedin.com/in/kiril-u}{linkedin.com/kiril-u} \\
-			\raisebox{-1pt}{\faHome} & \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod, South District} \\% Website
+% \parbox[top][0.11\textheight][c]{\linewidth}{ % Box to hold the colored box; change the fixed height as needed to match the box to the left
+%	\colorbox{shade}{ % Create colored box and specify background color
+%		\begin{supertabular}{@{\hspace{3pt}} p{0.05\linewidth} | p{0.5\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+%			\raisebox{-1pt}{\faPhone} & \href{tel:972525470608}{052-5470608} \\ % Phone number
+%			\raisebox{-1pt}{\small\faEnvelope} & \href{mailto:kirilu@tutanota.com}{kirilu@tutanota.com} \\ % Email address
+			% \raisebox{-1pt}{\small\faGithub} & \href{https://github.com/kiril-u}{kiril-u} \\
+%			\raisebox{-1pt}{\faHome} & \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod, South District} \\% Website
 			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
 			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
 			% See fontawesome.pdf in the Fonts folder for all icons you can use
-		\end{supertabular}
-	}
-	\vfill % Push content to the top of the box
-}
-
+%		\end{supertabular}
+%	}
+	% \vfill % Push content to the top of the box
+% }
 \section{Summary}
+Curious by nature, autodidactic by choice; a pleasant
+coworker, and a dedicated service provider. I'm not merely willing to acquire more knowledge and further expand my skill set, I'm eager to do so, optimally by assuming exciting and meaningful positions.
 
-- Works well independently or in a group setting \\
-- Fast and autodidactic learner, capable of adapting to new environments fairly easily \\
-- Highly motivated to provide apt help, treatment, service, and support to customers, patients, and coworkers\\
-- Looking for a workplace in which I could utilize my skills
-
- % tech: Works well independently or in a group setting, providing all facets of technical support and assistance with computers and other devices, such as troubleshooting, installations, and maintenance. In-depth knowledge and understanding of numerous software packages and operating systems.
 \section{Work Experience}
 
 % Each job is added with a \jobentry command. Below is an empty one to use as a template:
@@ -222,99 +222,126 @@
 
 %------------------------------------------------
 
-\textbf{\large Educational Psychologist} (Intern) \hfill 2019 -- 2021 \\
-\large \textit{Educational-Psychological Services Center, Afula}
+\textbf{\large Educational Psychologist} \textbf{(Intern)} \hfill 2019 -- 2021 \\
+{Educational-Psychological Services Center, Afula.}
 
-\normalsize- Conducted evaluations for students to determine their eligibility for special needs programs.
-\\
-- Coordinated with teachers and administrative staffs to implement classroom management procedures and Individualized Educational Programs for at-risk students.
-\\
-- Provided counseling services to parents on behavior management techniques and parenting skills. \\
+% \normalsize Conducted psychodidactic evaluations for K-12, took part in parental counseling, and lead pedagogical committees with school personnel and state appointed professionals.
+\noindent\dotfill %------------------------------------------------
 
-%------------------------------------------------
-\textbf{\large Rehabilitation Coordinator} \hfill 2018 -- 2019 \\
-\href{http://www.kidumpro.co.il/}{\large \textit{Kidum Rehabilitation Projects, Ashdod}}
+\noindent\textbf{\large Rehabilitation Coordinator} \hfill 2018 -- 2019 \\
+\href{http://www.kidumpro.co.il/}{Kidum Rehabilitation Projects, Ashdod.}
 
-- Established and maintained contact with clients and other key stakeholders to ensure and facilitate their access to appropriate information, care providers, and other essential services \\
-- Formalized, reviewed, monitored and reported on patients' progress with regard to their rehabilitation programs \\
+\noindent\dotfill %------------------------------------------------
 
-%------------------------------------------------
-\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{\large \textbf{Security Guard}} \hfill 2013 -- 2015
+\noindent\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{\large \textbf{Security Guard}} \hfill 2013 -- Current \\
+\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{Reshef Security Ltd., Ashdod.}
 
-\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{\large \textit{Reshef Security Ltd.}}
-
-\href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{- Bank Leumi's office buildings in Lod and Rishon LeZion\\
-- Flying Cargo Logistics Center at Kannot Industrial Zone}
-
-\section{Community Involvement}
-
-\textbf{Mental Health Assistant, Eilat} \hfill 2017 -- 2018 \\
-\textit{Clalit's Mental Health Clinic} \\
-Assisted psychiatrists and psychologists in treating patients suffering from mental or emotional disorders.
-
-\textbf{Mentorship at Perach, Eilat} \hfill 2015 -- 2018
-% Acted as a tutor and mentor for underprivileged children
-
-\switchcolumn % Switch to the second (right) column
+% \href{https://loona-il.000webhostapp.com/resume-references/recommendation-letter-security-guard.jpg}{- Bank Leumi's office buildings in Lod and Rishon LeZion\\
+% - Flying Cargo Logistics Center at Kannot Industrial Zone}
 
 \section{Education}
 
-\textbf{M.A., Educational Psychology} \hfill 2019 -- 2021 \\
-\textit{Max Stern Yezreel Valley College}
+\textbf{\large M.A. Educational Psychology} \hfill 2019 -- 2021
 
+\noindent Max Stern Yezreel Valley College
+
+\noindent\dotfill %------------------------------------------------
+
+\noindent\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\large \noindent\textbf{B.A. Psychology} \normalsize{(Summa Cum Laude)} \hfill 2015 -- 2018}
+
+\noindent Ben-Gurion University of the Negev
+
+\noindent\textbf{Awards}
+
+\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Rector’s Prize for Academic Excellence \hfill 2018}
+
+\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Department Chair’s Excellency Award \hfill 2017}
 %------------------------------------------------
-\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{B.A., Psychology}} \hfill 2015 -- 2018 \\
-\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Summa Cum Laude}} \\
-\textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Ben-Gurion University of the Negev}}
 
-\section{Awards}
-
-\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Rector’s Prize for Academic Excellence}} \hfill 2018 \\
-\textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Ben-Gurion University of the Negev}}
-
-%------------------------------------------------
-\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Department Chair’s Excellency Award}} \hfill 2017 \\
-\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textit{Ben-Gurion University of the Negev}}
+\begin{paracol}{2} % Begin two-column mode
+	% \centering % Horizontally center text
 
 \section{Certifications}
 
 \href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textbf{Computer Technician}} \hfill 2009 -- 2010 \\
-\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textit{IQline, Academy of Sciences and Arts}}
+\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{IQline, Academy of Sciences and Arts}
 
 \section{Computer Skills}
 
-%------------------------------------------------
-\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
-	%------------------------------------------------
-	\tableentry{OS}{GNU/Linux, Microsoft Windows}{spaceafter}
+\textbf{Operating Systems} \\
+ - Linux (Debian, Ubuntu, RHEL, CentOS, Arch, Alpine).\\
+ - Microsoft Windows.
 
-	\tableentry{Office}{Word, PowerPoint, Excel, Outlook}{}
-	\tableentry{}{OneNote, Publisher, Access.}{spaceafter}
+\textbf{Command-line interpreters} \\
+- Bash and other variants of Unix shell \\
+- Powershell, cmd.exe
+
+\textbf{Web:} \href{https://kirilu.netlify.app/resume/}{HTML5, CSS, XML, Hugo (demo).}
+
+\textbf{Microsoft Office:} Word, PowerPoint, Excel, Outlook.
+
+\textbf{Misc:} \href{https://github.com/kiril-u}{Git}, LaTeX, SPSS/AMOS, R, Adobe Photoshop.
+
+% \textbf{Editing Software} \\
+% - Adobe Photoshop, GIMP, ImageMagick \\
+% - Sony Vegas, Kdenlive, Ardour. \\
+
+%------------------------------------------------
+% \begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
 	%------------------------------------------------
-	\tableentry{Statistics}{SPSS, AMOS, JASP}{spaceafter}
+%	\tableentry{OS}{Linux (Debian, Ubuntu, RHEL, CentOS, Arch, Alpine).}{}
+%	\tableentry{}{Microsoft Windows.}{spaceafter}
+
+%	\tableentry{Office}{Word, PowerPoint, Excel, Outlook (and FOSS equivalents).}{spaceafter}
+%	\tableentry{}{}{spaceafter}
 	%------------------------------------------------
-	\tableentry{Editing}{Adobe Photoshop, GIMP, Krita}{}
-	\tableentry{}{Sony Vegas, Kdenlive, Ardour}{spaceafter}
+%	\tableentry{Statistics}{IBM's SPSS/AMOS, JASP, R.}{spaceafter}
 	%------------------------------------------------
-\end{supertabular}
+%	\tableentry{Editing}{Adobe Photoshop, Sony Vegas,}{} \tableentry{}{GIMP, Kdenlive, Ardour.}{spaceafter}
+	%------------------------------------------------
+%	\tableentry{CLI}{Bash and other variants of Unix shell.}{}
+%	\tableentry{}{Powershell, cmd.exe.}{spaceafter}
+	%------------------------------------------------
+%	\tableentry{Web}{HTML5, CSS, XML, Hugo}{spaceafter}
+%	\tableentry{Other}{(Xe/Lua/Bib/La)-tex, Git, Docker}{spaceafter}
+% \end{supertabular}
+
+
+ % Switch to the second (right) column
+\switchcolumn
+% \section{Awards}
+% \textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Rector’s Prize for Academic Excellence}} \hfill 2018
+%\textit{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Ben-Gurion University of the Negev}}
+
+%------------------------------------------------
+% \textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Department Chair’s Excellency Award}} \hfill 2017 \\
+% \href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textit{Ben-Gurion University of the Negev}}
+%\textbf{\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{Department Chair’s Excellency Award}}
+%\href{https://loona-il.000webhostapp.com/resume-references/BA-and-honorary.pdf}{\textit{Ben-Gurion University, 2017}}
 
 \section{Languages}
+ - Full Professional \textbf{English} (9/10). \\
+ - Full Professional \textbf{Hebrew} (9/10). \\
+ - Professional Working \textbf{Russian} (7/10).
 %------------------------------------------------
-\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
-	\tableentry{Natural}{English, Hebrew, Russian}{}
-
-	\tableentry{Command}{Bash, Zsh, Bourne Shell, and other}{}
-	\tableentry{}{similar POSIX-compliant languages.}{}
-
-	\tableentry{Markup}{HTML, Markdown, XML, \LaTeX}{spaceafter}
-\end{supertabular}
+%\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+%	\tableentry{English}{Full Professional Proficiency (9/10)}{}
+%	\tableentry{Hebrew}{Full Professional Proficiency (9/10)}{}
+%	\tableentry{Russian}{Professional Working Proficiency (7/10)}{spaceafter}
+%\end{supertabular}
 %------------------------------------------------
 \section{Military Service}
-\textbf{NCO of Casualty Assistance} \hfill 2013 -- 2014 \\
-\textit{Combat Engineering Corps}
+\textbf{Casualty Assistance, NCO} \hfill 2013 -- 2014 \\
+Combat Engineering Corps.
 
-- Assistance to spouses and families of casualties in coordinating funeral honors and memorials
+ \section{Community Involvement}
 
-- Helped relatives to receive benefits or entitlements during the period immediately following a casualty
+ \textbf{Mental Health Assistant} \hfill 2017 -- 2018 \\
+ Clalit, Eilat.
+% Assisted psychiatrists and psychologists in treating patients suffering from mental or emotional disorders.
+
+ \textbf{Mentorship at Perach} \hfill 2015 -- 2018
+ %Acted as a tutor and mentor for underprivileged children
 \end{paracol} % End two-column mode
+
 \end{document}
