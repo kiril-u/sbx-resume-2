@@ -15,7 +15,7 @@
 
 *.html
 
-./Export/*
+./Export
 
 kr22-en.pdf
 kr22-main.pdf
