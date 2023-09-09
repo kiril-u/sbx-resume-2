@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-`sudo apt-get install poppler-utils texlive-base texlive-latex-base texlive-xetex`
+`sudo apt-get install poppler-utils texlive-base texlive-latex-base texlive-xetex texlive-lang-arabic`
 
 ## Structure
 

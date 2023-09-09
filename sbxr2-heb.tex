@@ -90,16 +90,12 @@ UprightFont=*-Regular.otf,
 BoldFont=*-Bold.otf,
 ItalicFont=*-Italic.otf
 ]
-
-\newfontfamily{\cursivefont}{freebooterscript} % New font family for the cursive font Freebooter Script
-
+%\newfontfamily{\cursivefont}{freebooterscript} % New font family for the cursive font Freebooter Script
 \newfontfamily{\FA}{FontAwesome} % Create a new font family for FontAwesome icons
 \input{Fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the Fonts folder
-
 %----------------------------------------------------------------------------------------
 %	HEADERS & FOOTERS
 %----------------------------------------------------------------------------------------
-
 \usepackage{fancyhdr} % Required for customizing headers and footers
 \pagestyle{fancy} % Enable custom headers and footers
 
@@ -109,11 +105,8 @@ ItalicFont=*-Italic.otf
 %----------------------------------------------------------------------------------------
 %	SECTIONS
 %----------------------------------------------------------------------------------------
-
 \usepackage[nobottomtitles*]{titlesec} % Required for modifying sections, the nobottomtitles* pushes section titles to the next page when they are close to the bottom of the page
-
 \renewcommand{\bottomtitlespace}{0.05\textheight} % The minimal space required from the bottom margin so a section title isn't moved to the next page
-
 \titleformat
 {\section} % Section type being modified
 [block] % Section layout type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
@@ -124,9 +117,7 @@ ItalicFont=*-Italic.otf
 [\color{black}\titlerule] % Code after the section title
 
 \titlespacing*{\section}{0pt}{0pt}{8pt} % Spacing around section titles, the order is: left, before and after
-
 %------------------------------------------------
-
 \titleformat
 {\subsection} % Section type being modified
 [block] % Section layout type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
@@ -140,14 +131,11 @@ ItalicFont=*-Italic.otf
 %----------------------------------------------------------------------------------------
 %	COLORS
 %----------------------------------------------------------------------------------------
-
 \usepackage[usenames, svgnames]{xcolor} % Required for defining and using custom colors
-
 \definecolor{text}{HTML}{2b2b2b} % Main document text color, off-black
 \definecolor{headings}{HTML}{701112} % Dark red color for headings
 \definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
 \definecolor{linkcolor}{HTML}{641c1d} % 25% desaturated headings color for links
-
 \color{text} % Set the default text color
 %----------------------------------------------------------------------------------------
 %	LINKS & METADATA
@@ -168,7 +156,6 @@ hidelinks
 %----------------------------------------------------------------------------------------
 %	CUSTOM COMMANDS
 %----------------------------------------------------------------------------------------
-
 % Command for adding a new job entry (work experience)
 \newcommand{\jobentry}[5]{
 	{\raggedleft\textsc{#1\expandafter\ifstrequal\expandafter{#2}{}{}{\hspace{6pt}\footnotesize{(#2)}}}\par} % Duration and conditional full time/part time text
@@ -177,7 +164,6 @@ hidelinks
 	\expandafter\ifstrequal\expandafter{#5}{}{}{#5} % Description
 	\medskip % Vertical whitespace
 }
-
 % Command for entering a new qualification (education)
 \newcommand{\qualificationentry}[5]{
 	\raggedleft\textsc{#1} & \textbf{#2}\\ % Duration and degree
@@ -185,12 +171,10 @@ hidelinks
 	\raggedleft\expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\} % Department
 	\raggedleft\expandafter\ifstrequal\expandafter{#5}{}{}{& \textit{#5}\\[5pt]} % Institution
 }
-
 % Command for entering a separate table row -- used for any section that uses a two column table for alignment
 \newcommand{\tableentry}[3]{
 	\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[5pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
 }
-
 % Headers and footers can be added with the following commands: \lhead{}, \rhead{}, \lfoot{} and \rfoot{}
 % Example right footer:
 %\rfoot{\textcolor{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
@@ -204,21 +188,21 @@ hidelinks
 \newfontfamily\hebrewfont[Script=Hebrew]{Arial}
 % Use \begin{hebrew} block of text \end{hebrew} for paragraphs.
 % Use \texthebrew{ } and \textenglish{ } for short texts.
-
-\columnratio{0.5, 0.5} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content
+\columnratio{0.55, 0.45} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content
 \begin{document}
  % ------------------------ START OF THE HEBREW VERSION ------------------------ %
 \setRTL
 \begin{hebrew}
 
-	\begin{center}
-		{\Huge{\textbf{אוריבסקי קיריל}}}
-
-		\vspace{2pt}
-		\colorbox{shade}{ % Create colored box and specify background color
-			 \href{tel:972525470608}{052-5470608} \raisebox{-1pt}{\faPhone} |  \href{mailto:kirilu@tutanota.com}{kirilu@tutanota.com} \raisebox{0pt}{\small\faEnvelope} | \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{אשדוד} \raisebox{0pt}{\faHome}
-		}
-	\end{center}
+\begin{center}
+	{\Huge{\textbf{אוריבסקי קיריל}}}
+	
+	
+\vspace{2pt}
+\colorbox{shade}{ % Create colored box and specify background color
+	\href{tel:972525470608}{052-5470608} \raisebox{-1pt}{\faPhone} |  \href{mailto:kirilurivsky.isr@gmail.com}{kirilurivsky.isr@gmail.com} \raisebox{0pt}{\small\faEnvelope} | \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{אשדוד} \raisebox{0pt}{\faHome}
+}
+\end{center}
 	\section{תמצית}
 	אוטודידקט סקרן, מסור לעבודתו ועיסוקיו, ונעים הליכות אשר נלהב לרכוש ידע ומיומנויות חדשות, וכמו כן מעוניין להרחיב הלאה את אופקיו ויכולותיו במסגרת תפקיד מאתגר ומשמעותי.
 	\section{ניסיון תעסוקתי}
@@ -258,6 +242,10 @@ hidelinks
 	\begin{paracol}{2} % Begin two-column mode
 		\section{תעודות והכשרות}
 
+\href{https://courses.edx.org/certificates/dc4f0cd758304785a2ea62cca29e6a86}{\textbf{מבוא ללינוקס}} \hfill 2023 \\
+\begin{english}
+\href{https://courses.edx.org/certificates/dc4f0cd758304785a2ea62cca29e6a86}{The Linux Foundation} \end{english}
+
 		\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textbf{טכנאי מחשבים}} \hfill 2009 -- 2010 \\
 		\href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{,IQline האקדמיה למדע ואומנות.}
 
@@ -267,36 +255,39 @@ hidelinks
 		\setLTR
 
 \textbf{Operating Systems} \\
-- Linux (Debian, Ubuntu, RHEL, CentOS, Arch, Alpine).\\
-- Microsoft Windows.
+- Linux (Debian, RHEL, SUSE, Arch and their derivatives)\\
+- Microsoft Windows (Client + Server)
 
-\textbf{Command-line interpreters} \\
+\textbf{Command-line Interpreters} \\
 - Bash and other variants of Unix shell \\
-- Powershell, cmd.exe
+- Powershell
 
-\textbf{Web:} \href{https://kirilu.netlify.app/resume/}{HTML5, CSS, XML, Hugo (demo).}
+\textbf{Web:} \href{https://kirilu.netlify.app/resume/}{HTML5, CSS, Hugo}
 
-\textbf{Microsoft Office:} Word, PowerPoint, Excel, Outlook.
+% \textbf{Microsoft Office:} Word, PowerPoint, Excel, Outlook
 
-\textbf{Misc:} \href{https://github.com/kiril-u}{Git}, LaTeX, SPSS/AMOS, R, Adobe Photoshop.
+\textbf{Miscellaneous:} \href{https://github.com/kiril-u}{Git}, SSH, RDP, \LaTeX.
 
 		\unsetLTR
 		\setRTL
 		\switchcolumn
 
 		\section{שפות}
-		- \textbf{אנגלית} ברמת שליטה מצויינת (9/10). \\
-		- \textbf{עברית} ברמת שפת אם (9/10). \\
-		- \textbf{רוסית} ברמת שפת אם (7/10).
+		- \textbf{אנגלית} ברמת שליטה מצויינת \\
+		- \textbf{עברית} ברמת שפת אם \\
+		- \textbf{רוסית} ברמה בינונית
 
 		\section{שירות צבאי}
 		\textbf{מש"ק נפגעים} \hfill 2013 -- 2014 \\
 		חיל ההנדסה הקרבית, מפקדת זרוע יבשה.
 
 		\section{התנדבות ועשייה למען הקהילה}
+		
+		\textbf{מורה פרטי} \hfill 2019 -- 2020 \\
+		סטטיסטיקה, אנגלית, פסיכולוגיה ומדה"ח
 
 		\textbf{התלמדות טיפולית} \hfill 2017 -- 2018 \\
-		מרפאת בריאות הנפש הדקל, אילת.
+		מרפאת בריאות הנפש הדקל, אילת
 
 		\textbf{חונך אישי בפרוייקט פר"ח} \hfill 2015 -- 2018
 	\end{paracol} % End two-column mode

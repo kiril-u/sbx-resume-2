@@ -1,16 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Simple, Bidirectional, XeLaTeX Resume - Two
 % https://github.com/kiril-u/sbx-resume-2
-% Copyright 2022 kiril-u.
+% Copyright (C) 2022-2013 kiril-u.
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
-% Based on the work of Vel and Alessandro Plasmati of LaTeXTemplates.com
 %!TEX program = xelatex
-% NOTE: this template must be compiled with XeLaTeX rather than PDFLaTeX
-% due to the custom fonts used. The line above should ensure this happens
-% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
-% to switch to using XeLaTeX.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[
 	12pt,a4paper % Default font size, can be between 8pt and 12pt
@@ -171,11 +166,12 @@
 \defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
 \setdefaultlanguage{english}
 \setotherlanguage{hebrew}
-\newfontfamily\hebrewfont[Script=Hebrew]{Calibri}
+% \newfontfamily\hebrewfont[Script=Hebrew]{Calibri}
 % Use \begin{hebrew} block of text \end{hebrew} for paragraphs.
 % Use \texthebrew{ } and \textenglish{ } for short texts.
 % -----------------------
 \columnratio{0.5, 0.5} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content
+
 \begin{document}
 % {\sffamily\Huge \textbf{Kiril Urivsky}} \\
 \begin{center}
@@ -183,47 +179,19 @@
 
 \vspace{2pt}
 \colorbox{shade}{ % Create colored box and specify background color
-\raisebox{-1pt}{\faPhone} \href{tel:972525470608}{052-5470608} | \raisebox{0pt}{\small\faEnvelope} \href{mailto:kirilu@tutanota.com}{kirilu@tutanota.com} | \raisebox{0pt}{\faHome} \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod, South District}
+\raisebox{-1pt}{\faPhone} \href{tel:972525470608}{052-5470608} | \raisebox{0pt}{\small\faEnvelope} \href{mailto:kirilurivsky.isr@gmail.com}{kirilurivsky.isr@gmail.com} | \raisebox{0pt}{\faHome} \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod, South District}
 }
 \end{center}
-%--------------- COLORED CONTACT DETAILS BOX ---------------%
-% \parbox[top][0.11\textheight][c]{\linewidth}{ % Box to hold the colored box; change the fixed height as needed to match the box to the left
-%	\colorbox{shade}{ % Create colored box and specify background color
-%		\begin{supertabular}{@{\hspace{3pt}} p{0.05\linewidth} | p{0.5\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
-%			\raisebox{-1pt}{\faPhone} & \href{tel:972525470608}{052-5470608} \\ % Phone number
-%			\raisebox{-1pt}{\small\faEnvelope} & \href{mailto:kirilu@tutanota.com}{kirilu@tutanota.com} \\ % Email address
-			% \raisebox{-1pt}{\small\faGithub} & \href{https://github.com/kiril-u}{kiril-u} \\
-%			\raisebox{-1pt}{\faHome} & \href{https://goo.gl/maps/MSacjpSy7vZSKykP7}{Ashdod, South District} \\% Website
-			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
-			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
-			% See fontawesome.pdf in the Fonts folder for all icons you can use
-%		\end{supertabular}
-%	}
-	% \vfill % Push content to the top of the box
-% }
+
 \section{Summary}
-Curious by nature, autodidactic by choice; a pleasant
-coworker, and a dedicated service provider. I'm not merely willing to acquire more knowledge and further expand my skill set, I'm eager to do so, optimally by assuming exciting and meaningful positions.
+A curious, autodidactic, and a dedicated service provider; as well as a pleasant and supportive coworker. I'm not merely willing to acquire more knowledge and further expand my skill set, I'm eager to do so, optimally by assuming exciting and meaningful positions.
 
 \section{Work Experience}
 
-% Each job is added with a \jobentry command. Below is an empty one to use as a template:
-
-%\jobentry
-%	{} % Duration
-%	{} % FT/PT (full time or part time)
-%	{} % Employer
-%	{} % Job title
-%	{} % Description
-
-% All 5 parameters must be supplied but any can be empty if you don't need them
-
-%------------------------------------------------
-
 \textbf{\large Educational Psychologist} \textbf{(Intern)} \hfill 2019 -- 2021 \\
-{Educational-Psychological Services Center, Afula.}
-
+{Educational-Psychological Services Center, Afula.} 
 % \normalsize Conducted psychodidactic evaluations for K-12, took part in parental counseling, and lead pedagogical committees with school personnel and state appointed professionals.
+
 \noindent\dotfill %------------------------------------------------
 
 \noindent\textbf{\large Rehabilitation Coordinator} \hfill 2018 -- 2019 \\
@@ -261,43 +229,42 @@ coworker, and a dedicated service provider. I'm not merely willing to acquire mo
 
 \section{Certifications}
 
+\href{https://courses.edx.org/certificates/dc4f0cd758304785a2ea62cca29e6a86}{\textbf{Introduction to Linux}} \hfill 2023 \\
+\href{https://courses.edx.org/certificates/dc4f0cd758304785a2ea62cca29e6a86}{The Linux Foundation} \\
 \href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{\textbf{Computer Technician}} \hfill 2009 -- 2010 \\
 \href{https://loona-il.000webhostapp.com/resume-references/computer-technitian-certificate.jpg}{IQline, Academy of Sciences and Arts}
 
 \section{Computer Skills}
 
 \textbf{Operating Systems} \\
- - Linux (Debian, Ubuntu, RHEL, CentOS, Arch, Alpine)\\
+ - Linux (Debian, RHEL, SUSE, Arch and their derivatives)\\
  - Microsoft Windows (Client + Server)
 
 \textbf{Command-line Interpreters} \\
 - Bash and other variants of Unix shell \\
-- Powershell, cmd.exe
+- Powershell
 
-\textbf{Web:} \href{https://kirilu.netlify.app/resume/}{HTML5, CSS, XML, Hugo}
+\textbf{Web:} \href{https://kirilu.netlify.app/resume/}{HTML5, CSS, Hugo}
 
-\textbf{Microsoft Office:} Word, PowerPoint, Excel, Outlook
+% \textbf{Microsoft Office:} Word, PowerPoint, Excel, Outlook
 
-\textbf{Miscellaneous:} \href{https://github.com/kiril.u}{Git}, SSH, LaTeX, SPSS/AMOS, R, Adobe Photoshop
+\textbf{Miscellaneous:} \href{https://github.com/kiril-u}{Git}, SSH, RDP, \LaTeX.
 
 \switchcolumn
 
 \section{Languages}
- - Full Professional \textbf{English} (9/10) \\
- - Full Professional \textbf{Hebrew} (9/10) \\
- - Professional Working \textbf{Russian} (7/10)
-%------------------------------------------------
-%\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
-%	\tableentry{English}{Full Professional Proficiency (9/10)}{}
-%	\tableentry{Hebrew}{Full Professional Proficiency (9/10)}{}
-%	\tableentry{Russian}{Professional Working Proficiency (7/10)}{spaceafter}
-%\end{supertabular}
+ - English - Academic/Business fluent \\
+ - Hebrew - Native \\
+ - Russian - Intermediate
 %------------------------------------------------
 \section{Military Service}
 \textbf{Casualty Assistance, NCO} \hfill 2013 -- 2014 \\
 Combat Engineering Corps.
-
+%------------------------------------------------
  \section{Community Involvement}
+ 
+ \textbf{Tutor} \hfill 2019 -- 2020 \\
+  Statistics, English, Psychology and other Soc Sci.
 
  \textbf{Mental Health Assistant} \hfill 2017 -- 2018 \\
  Clalit, Eilat.

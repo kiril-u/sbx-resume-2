@@ -4,4 +4,4 @@ xelatex -synctex=1 -interaction=nonstopmode sbxr2-heb.tex
 xelatex -synctex=1 -interaction=nonstopmode sbxr2-eng.tex
 pdfunite sbxr2-heb.pdf sbxr2-eng.pdf Resume.pdf
 rm sbxr2-heb.pdf sbxr2-eng.pdf 
-rm ./*.aux ./*.log ./*.out ./*.synctex.gz
+rm ./*.aux ./*.log ./*.out ./*.synctex.gz ./missfont.log # Cleaning garbage
