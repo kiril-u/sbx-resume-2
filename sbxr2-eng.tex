@@ -1,32 +1,32 @@
-% Simple, Bidirectional, XeLaTeX Resume - II
-% https://github.com/kiril-u/sbx-resume-2
-% Copyright (C) 2022-2013 kiril-u.
-% This work may be distributed and/or modified under the conditions of the LaTeX Project Public License version 1.3c, available at http://www.latex-project.org/lppl/.
-%!TEX program = xelatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple, Bidirectional, XeLaTeX Resume - II
+% URL: https://github.com/kiril-u/sbx-resume-2
+% Copyright (C) 2022-2014 Kiril U.
+% This work may be distributed and/or modified under the conditions of the LaTeX Project Public License, either version 1.3 of this license or (at your option) any later version. The latest version of this license is in https://www.latex-project.org/lppl.txt and version 1.3 or later is part of all distributions of LaTeX version 2005/12/01 or later.
+% This work has the LPPL maintenance status `maintained'. The Current Maintainer of this work is Kiril U.
+% This work consists of the files sbxr2-eng.tex, sbxr2-hen.tex, and compile.sh.
+% This work may be distributed and/or modified under the conditions of the LaTeX Project Public License version 1.3c, available at http://www.latex-project.org/lppl/.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To make a PDF that includes two languages, one that's LTR (e.g. English), and the a second one in a language that's RTL (e.g. Hebrew), you need this file (sbxr2-eng.tex), as well as "sbxr2-heb.tex", and compile.sh". In addition to that, you need to have some utilities installed. For more information, see the README file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%!TEX program = xelatex
 \documentclass[
 	12pt,a4paper % Default font size, can be between 8pt and 12pt
 ]{article}
 \usepackage{microtype}
 \usepackage[utf8x]{inputenc} % cp1255 for Windows
 \usepackage{hebfont}
-%----------------------
-% CLASS CONFIGURATION
-%----------------------
+%---------------------- CLASS CONFIGURATION
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % Pass through any extra options specified to the base class
 \ProcessOptions\relax % Process class options
 % \LoadClass{article} % Load the base class
-%---------------------------------------------
-% REQUIRED PACKAGES AND MISC CONFIGURATIONS
-%---------------------------------------------
+%--------------------------------------------- REQUIRED PACKAGES AND MISC CONFIGURATIONS
 \usepackage{etoolbox} % Required for conditional logic and changing commands
 \setlength{\parindent}{0pt} % Paragraph indentation
 \usepackage{supertabular} % Required for the supertabular environment which allows tables to span multiple pages so sections with tables correctly wrap across pages
 \usepackage{extsizes} % Allows using more default font sizes as a class option
-%----------------------
-% MARGINS
-%----------------------
+%---------------------- MARGINS
 \usepackage[
 	a4paper, % Paper size
 	top=3cm, % Top margin
@@ -38,15 +38,11 @@
 	headheight=1cm, % Height of the header
 %showframe % Uncomment to show frames around the margins for debugging purposes
 ]{geometry}
-%----------------------
-% COLUMN LAYOUT
-%----------------------
+%---------------------- COLUMN LAYOUT
 \usepackage{paracol} % Required for creating multi-column layouts that can span pages automatically
 \AtBeginEnvironment{paracol}{\setlength{\parindent}{0pt}} % Paracols have default paragraph indentation and this overrides it to the template default of no indentation
 \setlength\columnsep{0.025\textwidth} % Amount of horizontal space between the columns
-%----------------------
-% FONTS
-%----------------------
+%---------------------- FONTS
 \usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
 \defaultfontfeatures{Ligatures=TeX} % To support LaTeX ligatures (e.g. `` and --)
 \defaultfontfeatures{Path=Fonts/} % Specify the location of font files
@@ -66,16 +62,12 @@
 
 \newfontfamily{\FA}{FontAwesome} % Create a new font family for FontAwesome icons
 \input{Fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the Fonts folder
-%----------------------
-% HEADERS & FOOTERS
-%----------------------
+%---------------------- HEADERS & FOOTERS
 \usepackage{fancyhdr} % Required for customizing headers and footers
 \pagestyle{fancy} % Enable custom headers and footers
 \renewcommand{\headrulewidth}{0pt} % Remove the default rule under the header
 \fancyhf{} % Clear default headers/footers by default, add headers and footers in the template file as per the example
-%----------------------
-% SECTIONS
-%----------------------
+%---------------------- SECTIONS
 \usepackage[nobottomtitles*]{titlesec} % Required for modifying sections, the nobottomtitles* pushes section titles to the next page when they are close to the bottom of the page
 \renewcommand{\bottomtitlespace}{0.05\textheight} % The minimal space required from the bottom margin so a section title isn't moved to the next page
 \titleformat
@@ -98,9 +90,7 @@
 [] % Code after the section title
 
 \titlespacing*{\subsection}{0pt}{8pt}{3pt} % Spacing around section titles, the order is: left, before and after
-%----------------------
-% COLORS
-%----------------------
+%---------------------- COLORS
 \usepackage[usenames, svgnames]{xcolor} % Required for defining and using custom colors
 \definecolor{text}{HTML}{2b2b2b} % Main document text color, off-black
 \definecolor{headings}{HTML}{701112} % Dark red color for headings
@@ -108,9 +98,7 @@
 \definecolor{linkcolor}{HTML}{641c1d} % 25% desaturated headings color for links
 
 \color{text} % Set the default text color
-%----------------------
-% LINKS & METADATA
-%----------------------
+%---------------------- LINKS & METADATA
 \usepackage[
 	unicode=true,
 	pdfborder=false,
@@ -124,9 +112,7 @@
 	pdfkeywords={Kiril Uribsky,אוריבסקי קיריל,resume,קורות חיים},
 	hidelinks
 ]{hyperref}
-%-----------------
-% CUSTOM COMMANDS
-%-----------------
+%----------------- CUSTOM COMMANDS
 % Command for adding a new job entry (work experience)
 \newcommand{\jobentry}[5]{
 	{\raggedleft\textsc{#1\expandafter\ifstrequal\expandafter{#2}{}{}{\hspace{6pt}\footnotesize{(#2)}}}\par} % Duration and conditional full time/part time text
@@ -152,9 +138,7 @@
 % Headers and footers can be added with the following commands: \lhead{}, \rhead{}, \lfoot{} and \rfoot{}
 % Example right footer:
 %\rfoot{\textcolor{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
-% -----------------------
-% Language Configuration
-% -----------------------
+% ----------------------- LANGUAGE CONFIGURATION
 \usepackage{polyglossia}
 \defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
 \setdefaultlanguage{english}
@@ -238,7 +222,7 @@ A curious, autodidactic, and a dedicated service provider; as well as a pleasant
 - Bash and other variants of Unix shell \\
 - Powershell
 
-\textbf{Web:} \href{https://kiril-u.github.io/resume/}{HTML5, CSS, Hugo}
+\textbf{Web:} \href{https://kiril-u.github.io/resume/}{HTML5, CSS, Hugo, Apache, Nginx}
 
 % \textbf{Microsoft Office:} Word, PowerPoint, Excel, Outlook
 
